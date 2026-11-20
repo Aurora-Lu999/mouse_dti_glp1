@@ -1,4 +1,3 @@
-<img width="800" height="1583" alt="ov_ncc" src="https://github.com/user-attachments/assets/16e089aa-26cd-46b0-a210-b7535019778b" />
 # Mouse DTI: shift correction, gradient-table check and connectome pipeline
 
 Scripts used for in-vivo mouse DTI (Bruker DtiEpi, 128 x 96 x 64, 34 volumes, b = 1005-1038). Code only: no data, no atlas.
