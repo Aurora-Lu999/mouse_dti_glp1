@@ -25,3 +25,6 @@ MRtrix3, FSL, ANTs (Python), Python 3 with numpy, scipy, nibabel, matplotlib.
 
 ## Note on animal IDs
 Some scripts contain scan IDs of our own cohort (for example in per-mouse special cases and example plots). They are internal identifiers only; replace them with your own subject IDs.
+
+## Figures
+The colour FA and tractography images in our slides were made by hand in `mrview` from the outputs of `05_colour_fa/fa_sc.sh` and `04_tractography/glp1_tract_sc.sh` (colour FA = V1 x FA x 2.5, capped at 1). The display settings are not scripted.
