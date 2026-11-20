@@ -1,7 +1,6 @@
 # Mouse DTI: shift correction, gradient-table check and connectome pipeline
 
-Scripts used for in-vivo mouse DTI (Bruker DtiEpi, 128 x 96 x 64, 34 volumes, b = 1005-1038). Code only: no data, no atlas.
-These are lab working scripts with absolute paths of our server; adapt the paths before running.
+Scripts used for in-vivo mouse DTI (Bruker DtiEpi, 128 x 96 x 64, 34 volumes, b = 1005-1038). 
 
 ## Steps
 1. `01_shift_correction`: after denoising and Gibbs removal, every DW volume is shifted along the phase-encoding axis j: s = s0 + C (k - ck) / hk, with s0 and C fitted per volume by maximising normalised cross-correlation with the mean b0 (`eddy2_sc.py`). The gradient directions are not used in the fit.
