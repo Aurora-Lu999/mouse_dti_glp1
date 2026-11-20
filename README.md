@@ -1,3 +1,4 @@
+<img width="800" height="1583" alt="ov_ncc" src="https://github.com/user-attachments/assets/16e089aa-26cd-46b0-a210-b7535019778b" />
 # Mouse DTI: shift correction, gradient-table check and connectome pipeline
 
 Scripts used for in-vivo mouse DTI (Bruker DtiEpi, 128 x 96 x 64, 34 volumes, b = 1005-1038). Code only: no data, no atlas.
@@ -22,9 +23,6 @@ Homotopic share = sum of m[i, i+166] over the 166 region pairs / sum of the uppe
 
 ## Requirements
 MRtrix3, FSL, ANTs (Python), Python 3 with numpy, scipy, nibabel, matplotlib.
-
-## Note on animal IDs
-Some scripts contain scan IDs of our own cohort (for example in per-mouse special cases and example plots). They are internal identifiers only; replace them with your own subject IDs.
 
 ## Figures
 The colour FA and tractography images in our slides were made by hand in `mrview` from the outputs of `05_colour_fa/fa_sc.sh` and `04_tractography/glp1_tract_sc.sh` (colour FA = V1 x FA x 2.5, capped at 1). The display settings are not scripted.
