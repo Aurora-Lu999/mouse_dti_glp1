@@ -13,8 +13,12 @@ These are lab working scripts with absolute paths of our server; adapt the paths
 
 Homotopic share = sum of m[i, i+166] over the 166 region pairs / sum of the upper triangle of the 332 x 332 matrix.
 
-## Known issue
-`04_tractography/glp1_tract_sc.sh` registers T2 to a b0 written with different strides than the T2; its label step is wrong in most mice (superseded by `03_labels/glp1_label_fix.sh`, which still fails on 2 of 23 mice and needs a coverage check).
+## Known issues
+- `04_tractography/glp1_tract_sc.sh` registers T2 to a b0 written with different NIfTI strides than the T2 (T2 -1 -2 3, b0 1 2 3). Its label step is wrong in most mice: do not use its labels or count files. `glp1_tract_shift.sh` (not included here) has the same T2-to-b0 step.
+- `03_labels/glp1_label_fix.sh` adds the strides fix, but still fails on 2 of 23 mice (label coverage of the mask 0.62 and 0.69). Two mice needed their own registration (scripts not included). Always check label coverage for every mouse (`cov2.py`, `label_all_chk.py`).
+- The labels used for the homotopic / interhemispheric analysis come from `glp1_conn3.sh` / `conn_v4new.sh` (FLIRT to a b0 with the same strides as the T2); their coverage of the mask was checked for all mice.
+- Test / exploratory scripts (3-mouse shear-reorientation test): `gradcheck_shear.sh`, `shear_tab.py`, `glp1_tract_shear.sh`, `homo_shear.py`.
+- Atlas-to-T2 registration scripts (ANTs) are not included.
 
 ## Requirements
 MRtrix3, FSL, ANTs (Python), Python 3 with numpy, scipy, nibabel, matplotlib.
