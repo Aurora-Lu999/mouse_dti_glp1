@@ -1,0 +1,12 @@
+*.nii
+*.nii.gz
+*.mif
+*.mih
+*.tck
+*.mat
+*.log
+*.csv
+*.png
+*.pdf
+*.xlsx
+__pycache__/
