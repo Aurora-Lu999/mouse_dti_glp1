@@ -22,3 +22,6 @@ Homotopic share = sum of m[i, i+166] over the 166 region pairs / sum of the uppe
 
 ## Requirements
 MRtrix3, FSL, ANTs (Python), Python 3 with numpy, scipy, nibabel, matplotlib.
+
+## Note on animal IDs
+Some scripts contain scan IDs of our own cohort (for example in per-mouse special cases and example plots). They are internal identifiers only; replace them with your own subject IDs.
